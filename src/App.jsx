@@ -57,11 +57,11 @@ function App() {
 }
 function imgPass(){
   const immg = document.getElementById('imgId');
-  if(length<=3) immg.src = './src/assets/download (4).svg';
-  else if(length>3 && length<=5) immg.src = './src/assets/download (3).svg';
-  else if(length>5 && length<=7) immg.src = './src/assets/download (2).svg';
-  else if(length>7 && length<=10) immg.src = './src/assets/download (1).svg';
-  else immg.src = './src/assets/download.svg';
+  if(length<=3) immg.src = './src/assets/vWeak.svg';
+  else if(length>3 && length<=5) immg.src = './src/assets/weak.svg';
+  else if(length>5 && length<=7) immg.src = './src/assets/good.svg';
+  else if(length>7 && length<=10) immg.src = './src/assets/strong.svg';
+  else immg.src = './src/assets/vStrong.svg';
 }
 
   return (
