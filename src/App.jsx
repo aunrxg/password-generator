@@ -1,6 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
 
+import img1 from './assets/good.svg'
+import img2 from './assets/strong.svg'
+import img3 from './assets/vStrong.svg'
+import img4 from './assets/vWeak.svg'
+import img5 from './assets/weak.svg'
+
 function App() {
 
   const [length, setLength] = useState(8);
@@ -57,11 +63,11 @@ function App() {
 }
 function imgPass(){
   const immg = document.getElementById('imgId');
-  if(length<=3) immg.src = './src/assets/vWeak.svg';
-  else if(length>3 && length<=5) immg.src = './src/assets/weak.svg';
-  else if(length>5 && length<=7) immg.src = './src/assets/good.svg';
-  else if(length>7 && length<=10) immg.src = './src/assets/strong.svg';
-  else immg.src = './src/assets/vStrong.svg';
+  if(length<=3) immg.src = img2;
+  else if(length>3 && length<=5) immg.src = img1;
+  else if(length>5 && length<=7) immg.src = img5;
+  else if(length>7 && length<=10) immg.src = img4;
+  else immg.src = img3;
 }
 
   return (
@@ -73,7 +79,7 @@ function imgPass(){
         </div>
         <div className='flex justify-evenly items-center w-3/4 '>
           <div>
-            <img id='imgId' src="./src/assets/download (1).svg" alt="v-strong" />
+            <img id='imgId' src={img5} alt="v-strong" />
           </div>
           <div className=' h-full w-1/2 flex flex-col justify-evenly items-center'>
             <div className='w-2/3 flex justify-between items-center'>
